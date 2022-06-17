@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation with HTML API</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <form onsubmit="event.preventDefault(); cadastrar(pacotes); controlar_lista(pacotes)" class="formulario">
+    <h2>
+      Cadastrar pacotes
+    </h2>
+
+    <div class="input">
+      <input required type="text" id="cidade" />
+      <label>Nome da cidade</label>
+      <span class="cidade"></span>
+    </div>
+
+
+    <div class="input">
+      <input required type="text" />
+      <label>Duração da viagem</label>
+      <span class="duracao"></span>
+    </div>
+
+    <div class="input">
+      <input required type="text" id="hospedagem" />
+      <label>Local de hospedagem</label>
+      <span class="hospedagem"></span>
+    </div>
+
+    <div class="input">
+      <input required type="text" id="valor" />
+      <label>Valor</label>
+      <span class="valor"></span>
+    </div>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+  <table id="pacotesCadastrados">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>CIDADE</th>
+            <th>DURAÇÃO</th>
+            <th>HOSPEDAGEM</th>
+            <th>VALOR</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</body>
+
+</html>
